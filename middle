@@ -1,0 +1,39 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffebee;
+  color: #d32f2f;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+#heart {
+  font-size: 100px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s;
+}
+
+#heart:active {
+  transform: scale(1.2);
+}
+
+button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #ffcdd2;
+  cursor: not-allowed;
+}
