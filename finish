@@ -1,0 +1,21 @@
+// Save progress
+function saveProgress() {
+  localStorage.setItem('hearts', hearts);
+  localStorage.setItem('multiplier', multiplier);
+  localStorage.setItem('multiplierCost', multiplierCost);
+}
+
+// Load progress
+function loadProgress() {
+  hearts = parseInt(localStorage.getItem('hearts')) || 0;
+  multiplier = parseInt(localStorage.getItem('multiplier')) || 1;
+  multiplierCost = parseInt(localStorage.getItem('multiplierCost')) || 10;
+  updateCounter();
+  updateMultiplier();
+}
+
+// Save progress every 5 seconds
+setInterval(saveProgress, 5000);
+
+// Load progress when the page loads
+window.onload = loadProgress;
