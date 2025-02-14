@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Clicker Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Heart Clicker</h1>
+    <p>Click the heart to collect hearts!</p>
+    <div id="heart" onclick="collectHearts()">❤️</div>
+    <p>Hearts Collected: <span id="counter">0</span></p>
+    <button onclick="buyMultiplier()">Buy Multiplier (Cost: 10 Hearts)</button>
+    <p>Multiplier: x<span id="multiplier">1</span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
