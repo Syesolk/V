@@ -1,0 +1,37 @@
+let hearts = 0;
+let multiplier = 1;
+let multiplierCost = 10;
+
+// Function to collect hearts
+function collectHearts() {
+  hearts += multiplier;
+  updateCounter();
+}
+
+// Function to buy a multiplier
+function buyMultiplier() {
+  if (hearts >= multiplierCost) {
+    hearts -= multiplierCost;
+    multiplier += 1;
+    multiplierCost *= 2; // Increase cost for next multiplier
+    updateCounter();
+    updateMultiplier();
+  }
+}
+
+// Function to update the heart counter
+function updateCounter() {
+  document.getElementById('counter').textContent = hearts;
+  // Disable the button if the player can't afford the multiplier
+  document.querySelector('button').disabled = hearts < multiplierCost;
+}
+
+// Function to update the multiplier display
+function updateMultiplier() {
+  document.getElementById('multiplier').textContent = multiplier;
+  document.querySelector('button').textContent = `Buy Multiplier (Cost: ${multiplierCost} Hearts)`;
+}
+
+// Initialize the game
+updateCounter();
+updateMultiplier();
